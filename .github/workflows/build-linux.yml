@@ -27,10 +27,7 @@ jobs:
           patchelf
           
     - name: Setup Rust
-      uses: actions-rs/toolchain@v1
-      with:
-        toolchain: stable
-        profile: minimal
+      uses: dtolnay/rust-toolchain@stable
         
     - name: Setup Node.js
       uses: actions/setup-node@v4
@@ -54,4 +51,3 @@ jobs:
       with:
         name: clash-verge-linux-deb
         path: src-tauri/target/release/bundle/deb/*.deb
-        retention-days: 30
